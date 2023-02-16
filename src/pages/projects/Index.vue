@@ -3,32 +3,33 @@ import axios from "axios";
 import TheProjectCard from "../../components/TheProjectCard.vue";
 
 export default{
+    components: { TheProjectCard },
     name: "ProjectsIndex",
     data() {
         return {
-            backendUrl: "",
+            backendUrl: "http://127.0.0.1:8000",
             projects: [],
         };
     },
     methods: {
         fetchProjects() {
             axios.get(this.backendUrl + "/api/projects").then((resp) => {
-                this.projets = resp.data;
+                // console.log(resp.data);
+                this.projects  = resp.data.data;
             });
         },
     },
     mounted() {
-        this.fetchPosts();
+        this.fetchProjects();
     },
-    components: { TheProjectCard }
 }
 
 </script>
 
 <template>
 <div class="container">
-    <h1>I TUOI PROGETTI</h1>
+    <h1 class="mt-5">I TUOI PROGETTI</h1>
 
-    <TheProjectCard  v-for="project in projects" :key="project.id"></TheProjectCard>
+    <TheProjectCard :project="project"  v-for="project in projects" :key="project.id"></TheProjectCard>
 </div>
 </template>

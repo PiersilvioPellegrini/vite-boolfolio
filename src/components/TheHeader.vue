@@ -31,7 +31,7 @@
           },
           {
             label: "Chi Siamo",
-            routeName: "about",
+            routeName: "aboutUs",
           },
           {
             label: "Contatti",

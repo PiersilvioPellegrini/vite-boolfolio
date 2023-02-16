@@ -1,10 +1,10 @@
 <template>
   <div class="card-deck">
     <div class="card">
-      <div v-if="post.img_cover">
+      <div v-if="project.img_cover">
         <img
           class="card-img-top"
-          :src="backedUrl + '/storage/' + project.cover_img"
+          :src="backendUrl + '/storage/' + project.img_cover"
           alt="Card image cap"
         />
       </div>
@@ -26,4 +26,9 @@
   </div>
 </template>
 
-<script></script>
+<script>
+export default {
+  name: "TheProjectCard",
+  props: ["project"]
+};
+</script>
