@@ -1,15 +1,21 @@
 
 <script>
-	export default {
+  import TheHeader from "./components/TheHeader.vue"
 
-	}
+	export default {
+    componets: { TheHeader},
+    data(){
+      return{
+
+      };
+    },
+	};
 </script>
 
 
 <template>
-  <div>
-    
-  </div>
+  <TheHeader></TheHeader>
+  <router-view></router-view>
 </template>
 
 <style lang="scss">
