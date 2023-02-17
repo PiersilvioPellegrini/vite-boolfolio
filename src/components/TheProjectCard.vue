@@ -29,6 +29,14 @@
 <script>
 export default {
   name: "TheProjectCard",
-  props: ["project"]
-};
+  props: ["project"],
+
+  data(){
+    return{
+      backendUrl:"http://127.0.0.1:8000"
+    }
+}
+
+
+}
 </script>
