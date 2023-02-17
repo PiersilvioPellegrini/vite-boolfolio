@@ -19,7 +19,7 @@
           {{ project.description }}
         </p>
         <p class="card-text">
-          <small class="text-muted">{{ project.type_id }}</small>
+          <small class="text-muted">Type_Id{{ project.type_id }}</small>
         </p>
       </div>
     </div>
